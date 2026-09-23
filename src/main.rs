@@ -11,8 +11,13 @@ fn main() {
     notzero();
     divide_by_four();
     using_if_in_late_statement();
+    // loops();
+    return_value_from_the_loop();
+    while_loop();
+    while_loop_in_index();
+    for_loop_in_index();
+    range();
 }
-
 
 // functions
 fn another_function(){
@@ -73,4 +78,57 @@ fn using_if_in_late_statement(){
     let age = 17;
     let person = if age<18 {"Minor"} else {"Not a Minor"};
     println!("This person is {person}");
+}
+
+//loopssssssss
+
+fn loops(){
+    loop{
+        let x =0;
+        println!("{x}");       
+        // x=x+1;
+
+    }
+}
+
+fn return_value_from_the_loop(){
+    let mut counter = 0;
+    let result = loop{
+        counter+=1;
+        if counter==10{
+            break counter*2;
+        }
+    };
+    println!("{}",result);
+}
+fn while_loop(){
+    let mut num = 3;
+    while num!=0 {
+        println!("{num}!");
+        num-=1;
+    }
+    println!("aabra ka badra");
+}
+fn while_loop_in_index(){
+    let a = [1,2,3,4,5];
+    let mut i = 0;
+    while i <5 {
+        println!("{}",a[i]);
+        i+=1;
+    }
+}
+fn for_loop_in_index(){
+    let a = [10,20,30,40,50];
+    for element in a  {
+        println!("{}",element);
+    }
+}
+
+fn range(){
+    for n in (1..10){
+        println!("{n} is from range");
+    }
+    for m in (0..5).rev(){
+        println!("{} in rev",m);
+    }
 }
