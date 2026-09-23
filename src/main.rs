@@ -1,3 +1,5 @@
+// comment lol
+
 fn main() {
     println!("Hello, world!");
     another_function();
@@ -5,8 +7,12 @@ fn main() {
     another_function_with_multiple_parameters("Bikalpa", 20);
     statement_and_expression();
     println!("{}",return_function());
+    if_statement(55);
+    notzero();
 }
 
+
+// functions
 fn another_function(){
     println!("This is an another function!");
 }
@@ -28,4 +34,22 @@ fn statement_and_expression(){
 fn return_function() -> i8{
     let x =5;
     x
+}
+
+
+//control flow
+
+fn if_statement(x:i8){
+    if x<18{
+        println!("Minor");
+    }
+    else{
+        println!("Not Minor")
+    }
+}
+fn notzero(){
+    let n= 10;
+    if n!=0{
+        println!("{n} is not a zero");
+    }
 }
