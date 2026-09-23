@@ -4,6 +4,7 @@ fn main() {
     another_function_with_parameters(5);
     another_function_with_multiple_parameters("Bikalpa", 20);
     statement_and_expression();
+    println!("{}",return_function());
 }
 
 fn another_function(){
@@ -11,7 +12,7 @@ fn another_function(){
 }
 
 fn another_function_with_parameters(x:i32) {
-    println!("The value of x is: {}",x);
+    println!("The value of x is: {x} ..........");
 }
 
 fn another_function_with_multiple_parameters(name:&str, age:u8){
@@ -23,4 +24,8 @@ fn statement_and_expression(){
         y+6
     };
     println!("{}",x);
+}
+fn return_function() -> i8{
+    let x =5;
+    x
 }
